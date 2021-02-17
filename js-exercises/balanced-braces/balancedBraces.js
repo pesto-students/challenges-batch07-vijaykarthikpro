@@ -1,4 +1,4 @@
-function balancedBraces(str) {
+function balancedBraces(...args) {
   const bracesStack = [];
 
   const bracesMap = {
@@ -13,9 +13,7 @@ function balancedBraces(str) {
     ')': true,
   };
 
-  for (let i = 0; i < str.length; i + 1) {
-    const char = str[i];
-
+  for (const char of args[0]) {
     if (bracesMap[char]) {
       bracesStack.push(char);
     } else if (closedBraces[char]) {
