@@ -8,7 +8,6 @@ function duplicateLetters(str) {
       charMap[char] += 1;
     }
   }
-
   const charCounts = Object.values(charMap);
   const countMax = Math.max(...charCounts);
 
